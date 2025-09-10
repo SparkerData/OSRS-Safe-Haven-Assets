@@ -59,7 +59,7 @@ The final dashboard includes:
 - **Drawdown analysis** → measure worst peak-to-trough declines.  
 - **Leaderboard** → rank items by Safe Haven Score.  
 
-![Leaderboard Screenshot](docs/leaderboard.png)
+![Leaderboard Screenshot](docs/leaderboard.png) <-- coming soon!
 
 ---
 
