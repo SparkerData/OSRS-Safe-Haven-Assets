@@ -1,5 +1,5 @@
-# Oldschool RuneScape Safe Haven Assets
-### Measuring Volatility and Drawdowns in the Grand Exchange
+# ⚔️ Oldschool RuneScape Safe Haven Assets
+### 🪙 Measuring Volatility and Drawdowns in the Grand Exchange
 
 Which Old School RuneScape items behave like gold during a market crash?  
 This project identifies items that act as safe haven assets, holding or gaining value during market stress, using financial analysis techniques.
@@ -98,7 +98,7 @@ python src/export_csvs.py --db data/osrs.db --out data/exports
 ```
 ---
 
-## 📚 Lessons Learned
+## Lessons Learned
 - Even in a virtual economy, classic financial metrics (volatility, drawdown) highlight which assets are defensive.  
 - Some items (like runes and feathers) behave like safe havens due to constant demand.  
 - Building a clean **ETL → SQL → BI pipeline** made analysis reusable and easy to share.  
@@ -106,10 +106,10 @@ python src/export_csvs.py --db data/osrs.db --out data/exports
 
 ---
 
-## 🙌 Attribution
+## Attribution
 - Price data: [OSRS Wiki Prices API](https://prices.runescape.wiki/)  
 - RuneScape © Jagex Ltd. This is a fan-made educational project.
 
 ---
 
-📝 [LICENSE](https://github.com/SparkerData/OSRS-Safe-Haven-Assets/blob/5c47b7030404697ce8249e71fd264c9d358e4c76/LICENSE)
+[LICENSE](https://github.com/SparkerData/OSRS-Safe-Haven-Assets/blob/5c47b7030404697ce8249e71fd264c9d358e4c76/LICENSE)
