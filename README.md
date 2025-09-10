@@ -83,8 +83,8 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# Ingest data
-python src/ingest.py --db data/osrs.db --items top200 --build-index
+# Ingest data (top 100 most-traded items by default)
+python src/ingest.py --db data/osrs.db --items topN --top-n 100 --build-index
 
 # Export for Power BI
 python src/export_csvs.py --db data/osrs.db --out data/exports
