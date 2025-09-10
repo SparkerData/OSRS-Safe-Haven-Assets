@@ -105,5 +105,4 @@ python src/export_csvs.py --db data/osrs.db --out data/exports
 
 ---
 
-📝 License
-[LICENSE](https://github.com/SparkerData/OSRS-Safe-Haven-Assets/blob/5c47b7030404697ce8249e71fd264c9d358e4c76/LICENSE)
+📝 [LICENSE](https://github.com/SparkerData/OSRS-Safe-Haven-Assets/blob/5c47b7030404697ce8249e71fd264c9d358e4c76/LICENSE)
