@@ -73,24 +73,22 @@ The final dashboard includes:
 ---
 
 ## 🚀 Quickstart
+```bash
 # Clone repo
 git clone https://github.com/YOURUSERNAME/osrs-safe-havens.git
 cd osrs-safe-havens
 
 # Set up environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# Ingest data (top 200 items by default)
+# Ingest data
 python src/ingest.py --db data/osrs.db --items top200 --build-index
 
 # Export for Power BI
 python src/export_csvs.py --db data/osrs.db --out data/exports
-
-# Open Power BI and import from data/exports/
-# Apply provided DAX measures and theme (see powerbi/ folder)
-
+```
 ---
 
 ## 📚 Lessons Learned
