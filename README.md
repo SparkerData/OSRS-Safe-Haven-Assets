@@ -101,6 +101,18 @@ python src/export_csvs.py --db data/osrs.db --out data/exports
 ```
 ---
 
+## Results
+
+The analysis identified several items that consistently acted as “safe havens” within the Grand Exchange economy. These items showed lower volatility and shallower drawdowns compared to the broader market index:
+
+- **Air runes** and **Feathers** ranked among the most stable assets, largely due to constant utility in training skills and high baseline demand.  
+- **Nature runes** and **Law runes** also behaved defensively, reflecting their importance in everyday gameplay.  
+- In contrast, speculative or boss-related drops such as **Zulrah’s scales** or **high-tier weapons** exhibited much higher volatility and deeper drawdowns.  
+
+These results suggest that RuneScape’s player-driven market mirrors real-world financial dynamics: items tied to consistent demand act like gold or bonds, while rare drops behave more like high-beta equities.  
+
+---
+
 ## Lessons Learned
 
 - Even in a virtual economy, traditional financial metrics such as volatility and drawdown provide valuable insights. They highlight which assets behave defensively and which are more speculative, reinforcing that the principles of market analysis can extend beyond real-world finance.  
