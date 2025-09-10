@@ -102,3 +102,8 @@ python src/export_csvs.py --db data/osrs.db --out data/exports
 ## 🙌 Attribution
 - Price data: [OSRS Wiki Prices API](https://prices.runescape.wiki/)  
 - RuneScape © Jagex Ltd. This is a fan-made educational project.
+
+---
+
+📝 License
+LICENSE
