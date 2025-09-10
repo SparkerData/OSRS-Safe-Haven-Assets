@@ -1,9 +1,8 @@
 # ⚔️ Oldschool RuneScape Safe Haven Assets
 ### 🪙 Measuring Volatility and Drawdowns in the Grand Exchange
-<br>
+
 Which Old School RuneScape items behave like gold during a market crash?  
 This project identifies items that act as safe haven assets, holding or gaining value during market stress, using financial analysis techniques.
-<br><br>
 
 ![Dashboard Screenshot](docs/dashboard.png)
 
@@ -59,7 +58,8 @@ The final dashboard includes:
 - **Drawdown analysis** → measure worst peak-to-trough declines.  
 - **Leaderboard** → rank items by Safe Haven Score.  
 
-![Leaderboard Screenshot](docs/leaderboard.png) (WIP)
+![Leaderboard Screenshot](docs/leaderboard.png)  
+*(Leaderboard screenshot WIP)*
 
 ---
 
@@ -73,18 +73,34 @@ The final dashboard includes:
 ---
 
 ## 🚀 Quickstart
-```bash
 # Clone repo
 git clone https://github.com/YOURUSERNAME/osrs-safe-havens.git
 cd osrs-safe-havens
 
 # Set up environment
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# Ingest data
+# Ingest data (top 200 items by default)
 python src/ingest.py --db data/osrs.db --items top200 --build-index
 
 # Export for Power BI
 python src/export_csvs.py --db data/osrs.db --out data/exports
+
+# Open Power BI and import from data/exports/
+# Apply provided DAX measures and theme (see powerbi/ folder)
+
+---
+
+## 📚 Lessons Learned
+- Even in a virtual economy, classic financial metrics (volatility, drawdown) highlight which assets are defensive.  
+- Some items (like runes and feathers) behave like safe havens due to constant demand.  
+- Building a clean **ETL → SQL → BI pipeline** made analysis reusable and easy to share.  
+- Translating finance concepts into a gaming context is a powerful way to learn analytics.
+
+---
+
+## 🙌 Attribution
+- Price data: [OSRS Wiki Prices API](https://prices.runescape.wiki/)  
+- RuneScape © Jagex Ltd. This is a fan-made educational project.
