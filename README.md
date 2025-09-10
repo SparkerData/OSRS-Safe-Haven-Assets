@@ -38,23 +38,26 @@ The purpose of this project was to apply those same concepts to a virtual econom
 ---
 
 ## Approach
+
 1. **Data ingestion**  
-   - Pulled item mappings and daily price time series from the [OSRS Wiki API](https://prices.runescape.wiki/)  
-   - Stored ~500 high-volume items in a local SQLite database  
+   The project starts with collecting live item data from the [OSRS Wiki API](https://prices.runescape.wiki/). Item mappings and daily price histories were pulled and written into a local SQLite database, which provides a lightweight but reliable backend for time-series storage. Instead of tracking every single item in the game, the pipeline focuses on ~500 of the most actively traded items to balance coverage and performance. This dataset is refreshed in batches and normalized for downstream analysis.  
 
 2. **Data modeling**  
-   - SQL views for returns, rolling volatility, drawdowns, and a market index  
-   - Exported cleaned CSVs for easy import into Power BI  
+   Once the raw data was captured, SQL was used to transform it into structured views. These views calculate daily returns, rolling volatility windows, drawdowns, and an equal-weighted market index that acts as a benchmark. By centralizing the business logic in SQL, the project ensures consistency and reusability across exports and visualizations. Cleaned tables and views were exported to CSVs so that Power BI could consume them directly.  
 
 3. **Analysis and scoring**  
-   - DAX measures for:  
-     - Rolling 30-day volatility  
-     - Max drawdown  
-     - Composite Safe Haven Score (low volatility + shallow drawdown = safer)  
+   In Power BI, DAX measures were defined to quantify financial metrics at the item level. Key measures included:  
+   - **Rolling 30-day volatility**: standard deviation of daily returns across a 30-day window  
+   - **Max drawdown**: largest peak-to-trough price decline over the dataset  
+   - **Safe Haven Score**: a composite rank that rewards low volatility and shallow drawdowns  
+   This scoring framework allows items to be compared fairly across categories and trading volumes.  
 
 4. **Visualization**  
-   - Power BI dashboard with slicers, time-series charts, and leaderboards  
-   - Users can filter to a specific item and instantly compare stability  
+   The analysis is surfaced in a Power BI dashboard designed for exploration. Users can:  
+   - Filter with slicers to isolate specific items  
+   - View time-series charts that track volatility and price stability  
+   - Compare items side by side in a leaderboard ranked by Safe Haven Score  
+   These visuals connect financial theory with game data, turning raw numbers into insights about how RuneScape’s economy mirrors real-world market behavior.  
 
 ---
 
