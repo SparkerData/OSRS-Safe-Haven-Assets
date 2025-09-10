@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+__pycache__/
+.venv/
+.env
+data/*
+!data/.gitkeep
+*.pbix
+*.csv
+*.parquet
