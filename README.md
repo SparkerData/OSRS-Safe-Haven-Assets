@@ -102,10 +102,16 @@ python src/export_csvs.py --db data/osrs.db --out data/exports
 ---
 
 ## Lessons Learned
-- Even in a virtual economy, classic financial metrics (volatility, drawdown) highlight which assets are defensive.  
-- Some items (like runes and feathers) behave like safe havens due to constant demand.  
-- Building a clean **ETL → SQL → BI pipeline** made analysis reusable and easy to share.  
-- Translating finance concepts into a gaming context is a powerful way to learn analytics.
+
+- Even in a virtual economy, traditional financial metrics such as volatility and drawdown provide valuable insights. They highlight which assets behave defensively and which are more speculative, reinforcing that the principles of market analysis can extend beyond real-world finance.  
+
+- Certain items, like runes and feathers, consistently acted as safe havens because of constant in-game demand. This mirrors the way commodities such as gold or bonds maintain value during economic downturns, showing how player-driven economies often reflect real economic forces.  
+
+- Designing a clean pipeline — from Python ingestion, to SQL modeling, to BI visualization — made the project maintainable and reusable. Each stage had a clear role, and by separating concerns it became much easier to iterate and scale the analysis.  
+
+- Translating financial concepts into a gaming context proved to be a powerful way to practice analytics. It made technical skills like ETL, DAX, and visualization more engaging while also strengthening the ability to explain complex ideas in a simple, relatable way.  
+
+- The project also emphasized the importance of storytelling in analytics. Numbers alone don’t capture attention, but framing them around the idea of “safe havens” in RuneScape connected the data to a narrative that anyone familiar with finance or gaming could appreciate.  
 
 ---
 
