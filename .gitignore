@@ -8,3 +8,7 @@ data/*
 *.pbix
 *.csv
 *.parquet
+data/exports/
+data/*.db
+*.tmp
+*.bak
