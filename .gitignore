@@ -12,3 +12,6 @@ data/exports/
 data/*.db
 *.tmp
 *.bak
+.vscode/
+.ipynb_checkpoints/
+*.log
