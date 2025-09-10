@@ -1,5 +1,5 @@
-# ⚔️ Oldschool RuneScape Safe Haven Assets
-### 🪙 Measuring Volatility and Drawdowns in the Grand Exchange
+# Oldschool RuneScape Safe Haven Assets
+### Measuring Volatility and Drawdowns in the Grand Exchange
 
 Which Old School RuneScape items behave like gold during a market crash?  
 This project identifies items that act as safe haven assets, holding or gaining value during market stress, using financial analysis techniques.
@@ -8,61 +8,69 @@ This project identifies items that act as safe haven assets, holding or gaining 
 
 ---
 
-## 📄 Project Description
+## Project Description
 **OSRS Safe Haven Assets** is a full-stack data analytics project built on a fun dataset: the Grand Exchange prices from Old School RuneScape.  
 
-- **Python** — pulls item prices via the OSRS Wiki API, stores them in SQLite.  
-- **SQL** — creates tables and views for returns, drawdowns, and market indexes.  
-- **Power BI** — interactive dashboard for rolling volatility, drawdowns, and leaderboards.  
-- **DAX** — measures for volatility, max drawdown, and a composite Safe Haven Score.  
+- **Python** for data ingestion, storing OSRS Wiki API data in SQLite  
+- **SQL** for returns, drawdowns, and market index modeling  
+- **Power BI** for an interactive dashboard with volatility charts and leaderboards  
+- **DAX** for volatility, max drawdown, and a composite Safe Haven Score  
 
 This project demonstrates:  
-- Data engineering (ETL and pipeline design)  
-- Time-series & financial-style analysis  
-- Data visualization & storytelling with Power BI  
-- A creative crossover between **gaming economics** and **financial analytics**  
+- Data engineering through ETL and pipeline design  
+- Time-series and financial-style analysis  
+- Data visualization and storytelling with Power BI  
+- A creative crossover between gaming economics and financial analytics
 
 ---
 
-## ❓ Problem
+## Problem
 In financial markets, investors look for “safe haven assets” like gold or bonds that hold value during downturns.  
-Could similar behavior be found in **RuneScape’s Grand Exchange** — a player-driven economy with thousands of tradeable items?
+Could similar behavior be found in RuneScape’s Grand Exchange, a player-driven economy with thousands of tradeable items?
 
 ---
 
-## 🔎 Approach
+## Financial Analysis Context
+In finance, a market downturn is typically defined as a sustained decline in asset prices, often measured by peak-to-trough drawdowns or broad index losses over time. Downturns can be triggered by many factors, such as shifts in supply and demand, macroeconomic events, or sudden shocks that reduce investor confidence. The result is increased volatility and sharper drawdowns as market participants sell off riskier assets.  
+
+The purpose of this project was to apply those same concepts to a virtual economy, Old School RuneScape’s Grand Exchange. By calculating volatility and drawdowns on in-game items, the analysis highlights which assets behave like safe havens, retaining value when the broader market weakens. This demonstrates how financial analysis techniques can be adapted to unconventional datasets and provides a practical way to connect data engineering, SQL modeling, and visualization skills to real-world economic principles.  
+
+---
+
+## Approach
 1. **Data ingestion**  
-   - Pulled item mappings and daily price time series from the [OSRS Wiki API](https://prices.runescape.wiki/).  
-   - Stored ~500+ high-volume items in a local SQLite database.  
+   - Pulled item mappings and daily price time series from the [OSRS Wiki API](https://prices.runescape.wiki/)  
+   - Stored ~500 high-volume items in a local SQLite database  
 
 2. **Data modeling**  
-   - SQL views for returns, rolling volatility, drawdowns, and a market index.  
-   - Exported cleaned CSVs for easy import into Power BI.  
+   - SQL views for returns, rolling volatility, drawdowns, and a market index  
+   - Exported cleaned CSVs for easy import into Power BI  
 
-3. **Analysis & scoring**  
+3. **Analysis and scoring**  
    - DAX measures for:  
      - Rolling 30-day volatility  
      - Max drawdown  
      - Composite Safe Haven Score (low volatility + shallow drawdown = safer)  
 
 4. **Visualization**  
-   - Power BI dashboard with slicers, time-series charts, and leaderboards.  
-   - Users can filter to a specific item and instantly compare stability.  
+   - Power BI dashboard with slicers, time-series charts, and leaderboards  
+   - Users can filter to a specific item and instantly compare stability  
 
 ---
 
-## 📊 Solution (Dashboard)
+## Solution (Dashboard)
 The final dashboard includes:  
-- **Interactive slicer** → choose any tradeable item.  
-- **Rolling volatility chart** → see how stable prices are over time.  
-- **Drawdown analysis** → measure worst peak-to-trough declines.  
-- **Leaderboard** → rank items by Safe Haven Score.  
+- Interactive slicer to choose any tradeable item  
+- Rolling volatility chart to see how stable prices are over time  
+- Drawdown analysis to measure worst peak-to-trough declines  
+- Leaderboard to rank items by Safe Haven Score  
 
 ![Leaderboard Screenshot](docs/leaderboard.png)  
+*Safe Haven Leaderboard, ranking items by volatility and drawdowns*
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Python** — requests, pandas, sqlite3  
 - **SQL** — schema, views, and metrics  
 - **Power BI** — dashboard visuals  
@@ -71,7 +79,7 @@ The final dashboard includes:
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 ```bash
 # Clone repo
 git clone https://github.com/YOURUSERNAME/osrs-safe-havens.git
@@ -79,7 +87,7 @@ cd osrs-safe-havens
 
 # Set up environment
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Ingest data (top 100 most-traded items by default)
