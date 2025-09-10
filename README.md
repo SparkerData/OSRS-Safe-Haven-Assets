@@ -1,4 +1,4 @@
-# 🪙 Oldschool RuneScape Safe Haven Assets
+# Oldschool RuneScape Safe Haven Assets
 ### Measuring Volatility and Drawdowns in the Grand Exchange
 <br>
 Which Old School RuneScape items behave like gold during a market crash?  
