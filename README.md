@@ -59,7 +59,6 @@ The final dashboard includes:
 - **Leaderboard** → rank items by Safe Haven Score.  
 
 ![Leaderboard Screenshot](docs/leaderboard.png)  
-*(Leaderboard screenshot WIP)*
 
 ---
 
