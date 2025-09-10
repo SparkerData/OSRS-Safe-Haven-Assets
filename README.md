@@ -1,5 +1,5 @@
-# Oldschool RuneScape Safe Haven Assets
-### Measuring Volatility and Drawdowns in the Grand Exchange
+# ⚔️ Oldschool RuneScape Safe Haven Assets
+### 🪙 Measuring Volatility and Drawdowns in the Grand Exchange
 <br>
 Which Old School RuneScape items behave like gold during a market crash?  
 This project identifies items that act as **safe haven assets** — holding or gaining value during market stress — using real financial analysis techniques.
